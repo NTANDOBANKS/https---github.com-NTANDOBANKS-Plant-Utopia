@@ -1,0 +1,83 @@
+/* Force full page height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Flex layout to push footer down */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Make main content grow to fill space */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #fffefe;
+    line-height: 1.6;
+    background-image: url(Images/Plant.jpg.jpg);
+  
+
+         
+  }
+  
+  /* Header Styles */
+  #Header {
+   
+    color: white;
+    padding: 20px;
+    text-align: center;
+     background-image: url(Images/Plant.jpg.jpg);
+  }
+  
+  #Header h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+  }
+  
+  #Header h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: #052001;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background: #072000;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+  }
+  
+  footer .column ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+}
