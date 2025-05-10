@@ -1,45 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Plant Utopia</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body>
-    <div class="page-container">
-      <header id="Header">
-        <h1>PLANT UTOPIA</h1>
-        <h2>Welcome to Plant Utopia</h2>
-        <hr />
-      </header>
-
-      <nav>
-        <a href="https://www.geeksforgeeks.org/">Home</a> |
-        <a href="https://www.geeksforgeeks.org/company-interview-corner/">
-          Interview</a
-        > |
-        <a href="https://www.geeksforgeeks.org/gate-cs-notes-gq/">Gate</a> |
-        <a href="https://www.geeksforgeeks.org/data-structures/">
-          Data Structure</a
-        > |
-        <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">
-          Algorithm</a
-        >
-      </nav>
-
-      <div class="content">
-        <!-- Your page content goes here -->
-        <h2>Welcome to our green paradise!</h2>
-      </div>
-
-      <footer>
-        <div class="column">
-          <h3>Company</h3>
-        </div>
-      </footer>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+        <div class="loading-bar"></div> <!-- Animated loading bar -->
     </div>
-  </body>
+
+    <div class="page-container">
+        <header id="Header">
+            <h1>PLANT UTOPIA</h1>
+            <h2>Welcome to Plant Utopia</h2>
+            <hr />
+        </header>
+
+        <nav>
+            <a href="">Home</a> |
+            <a href="About Us.html">About Us</a> |
+        </nav>
+
+        <div class="content">
+            <!-- Your page content goes here -->
+            <h2>Welcome to our green paradise!</h2>
+            <p>Explore a world of vibrant plants and lush greenery. Discover the perfect additions to your home and garden.</p>
+            <button class="cta-button">Explore Plants <i class="fas fa-leaf"></i></button>
+        </div>
+
+        <footer>
+            <div class="column">
+                <h3>Company</h3>
+            
+            </div>
+           
+         
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+</body>
 </html>

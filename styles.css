@@ -2,82 +2,290 @@
 html, body {
     height: 100%;
     margin: 0;
-  }
-  
-  /* Flex layout to push footer down */
-  .page-container {
+}
+
+/* Flex layout to push footer down */
+.page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  /* Make main content grow to fill space */
-  .content {
+}
+
+/* Make main content grow to fill space */
+.content {
     flex: 1;
-    padding: 20px;
-  }
-  
-  /* General Styles */
-  body {
+    padding: 40px; /* Increased padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparency */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    margin: 30px auto; /* Increased margin */
+    max-width: 900px; /* Increased max-width */
+    color: #333; /* Change text color to dark gray for better readability */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2d6a4f; /* Green color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow */
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #2d6a4f; /* Green color */
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1b4332; /* Darker green color */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* General Styles */
+body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #fffefe;
     line-height: 1.6;
     background-image: url(Images/Plant.jpg.jpg);
-  
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed during scroll */
+}
 
-         
-  }
-  
-  /* Header Styles */
-  #Header {
-   
+/* Header Styles */
+#Header {
     color: white;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     text-align: center;
-     background-image: url(Images/Plant.jpg.jpg);
-  }
-  
-  #Header h1 {
-    font-size: 2.5em;
-    margin: 0 0 10px;
-  }
-  
-  #Header h2 {
-    font-size: 1.5em;
+    background-image: url(Images/water.jpg);
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    position: relative; /* For the lights effect */
+    overflow: hidden; /* Hide overflowing lights */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+#Header h1 {
+    font-size: 3em; /* Increased font size */
+    margin: 0 0 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+    animation: slideInDown 1s ease-out; /* Slide-in animation */
+}
+
+#Header h2 {
+    font-size: 1.8em; /* Increased font size */
     font-weight: normal;
     margin: 0;
-  }
-  
-  /* Navigation Styles */
-  nav {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
+    animation: slideInUp 1s ease-out; /* Slide-in animation */
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Lights effect for Header */
+#Header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent);
+    animation: lights 5s linear infinite;
+}
+
+@keyframes lights {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation Styles */
+nav {
     background-color: #052001;
     color: white;
-    padding: 10px 0;
+    padding: 12px 0; /* Increased padding */
     text-align: center;
-  }
-  
-  nav a {
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Increased padding */
     display: inline-block;
-  }
-  
-  nav a:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
     background-color: #555;
-  }
-  
-  /* Footer Styles */
-  footer {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Footer Styles */
+footer {
     background: #072000;
     color: #fff;
-    padding: 1px;
+    padding: 30px; /* Increased padding for more space */
     text-align: center;
-  }
-  
-  footer .column ul {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Vertically align items */
+    position: relative; /* For the lights effect */
+    overflow: hidden; /* Hide overflowing lights */
+    animation: slideInUp 1s ease-out; /* Slide-in animation */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+footer .column {
+    flex: 1; /* Distribute space equally */
+    padding: 15px;
+}
+
+footer .column h3 {
+    font-size: 1.4em; /* Increased font size */
+    margin-bottom: 12px;
+    color: #fff; /* White color */
+}
+
+footer .column ul {
     list-style: none;
-    padding: 1px;
+    padding: 0;
     margin: 0;
+}
+
+footer .column ul li {
+    margin-bottom: 8px;
+}
+
+footer .column ul li a {
+    color: #eee; /* Lighter color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .column ul li a:hover {
+    color: #fff; /* White color on hover */
+}
+
+/* Lights effect for Footer */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent);
+    animation: lights 5s linear infinite;
+}
+
+/* Loading Animation Styles */
+.loader-container {
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    display: flex;
+    flex-direction: column; /* Stack loader and loading bar */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey border */
+    border-top: 8px solid #2d6a4f; /* Green color */
+    border-radius: 50%;
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    animation: spin 2s linear infinite; /* Spin animation */
+    margin-bottom: 20px; /* Add space between loader and loading bar */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Loading Bar Styles */
+.loading-bar {
+    width: 250px; /* Increased width */
+    height: 10px; /* Increased height */
+    background-color: #ddd;
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #2d6a4f, #52b788, #80ed99); /* Gradient colors */
+    border-radius: 5px;
+    animation: load 3s linear infinite; /* Loading animation */
+}
+
+@keyframes load {
+    0% { width: 0%; }
+    100% { width: 100%; }
 }
