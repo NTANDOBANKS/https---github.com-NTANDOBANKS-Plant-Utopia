@@ -8,32 +8,33 @@ html, body {
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
 }
 
 /* Make main content grow to fill space */
 .content {
-    flex: 1;
-    padding: 40px; /* Increased padding */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparency */
-    border-radius: 15px; /* More rounded corners */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-    margin: 30px auto; /* Increased margin */
-    max-width: 900px; /* Increased max-width */
-    color: #333; /* Change text color to dark gray for better readability */
-    display: flex; /* Use flexbox for vertical centering */
+    flex: 1; /* Allows the content to grow and take up available space */
+    padding: 40px;
+    background-color none    
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto 300px; /* Increased top and bottom margin for more space */
+    max-width: 900px;
+    color: #333;
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
+    justify-content: center; /* Vertically center content inside the box */
     align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    min-height: 400px; /* Minimum height for the content box */
 }
 
 .content h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #2d6a4f; /* Green color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow */
+    color: #2d6a4f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .content p {
@@ -44,7 +45,7 @@ html, body {
 }
 
 .cta-button {
-    background-color: #2d6a4f; /* Green color */
+    background-color: #2d6a4f;
     color: white;
     font-size: 1.2em;
     padding: 15px 30px;
@@ -55,7 +56,7 @@ html, body {
 }
 
 .cta-button:hover {
-    background-color: #1b4332; /* Darker green color */
+    background-color: #1b4332;
 }
 
 @keyframes fadeIn {
@@ -70,37 +71,37 @@ body {
     color: #fffefe;
     line-height: 1.6;
     background-image: url(Images/Plant.jpg.jpg);
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Keep the background fixed during scroll */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Header Styles */
 #Header {
     color: white;
-    padding: 30px; /* Increased padding */
+    padding: 30px;
     text-align: center;
     background-image: url(Images/water.jpg);
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the image */
-    position: relative; /* For the lights effect */
-    overflow: hidden; /* Hide overflowing lights */
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #Header h1 {
-    font-size: 3em; /* Increased font size */
+    font-size: 3em;
     margin: 0 0 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
-    animation: slideInDown 1s ease-out; /* Slide-in animation */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 1s ease-out;
 }
 
 #Header h2 {
-    font-size: 1.8em; /* Increased font size */
+    font-size: 1.8em;
     font-weight: normal;
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
-    animation: slideInUp 1s ease-out; /* Slide-in animation */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 1s ease-out;
 }
 
 @keyframes slideInDown {
@@ -153,49 +154,54 @@ body {
 nav {
     background-color: #052001;
     color: white;
-    padding: 12px 0; /* Increased padding */
+    padding: 12px 0;
     text-align: center;
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 12px 25px; /* Increased padding */
+    padding: 12px 25px;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     background-color: #555;
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1);
 }
 
 /* Footer Styles */
 footer {
     background: #072000;
     color: #fff;
-    padding: 30px; /* Increased padding for more space */
+    padding: 10px 10px; /* Adjusted padding: top/bottom, left/right */
     text-align: center;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: center; /* Vertically align items */
-    position: relative; /* For the lights effect */
-    overflow: hidden; /* Hide overflowing lights */
-    animation: slideInUp 1s ease-out; /* Slide-in animation */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Vertically align items in the footer */
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 1s ease-out;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    min-height: 60px; /* Reduced minimum height for a thinner footer */
+    font-size: 0.9em; /* Reduced font size for a smaller appearance */
 }
 
 footer .column {
-    flex: 1; /* Distribute space equally */
-    padding: 15px;
+    flex: 1;
+    padding: 5px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content within the column */
 }
 
 footer .column h3 {
-    font-size: 1.4em; /* Increased font size */
-    margin-bottom: 12px;
-    color: #fff; /* White color */
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #fff;
 }
 
 footer .column ul {
@@ -205,17 +211,17 @@ footer .column ul {
 }
 
 footer .column ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 footer .column ul li a {
-    color: #eee; /* Lighter color */
+    color: #eee;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer .column ul li a:hover {
-    color: #fff; /* White color on hover */
+    color: #fff;
 }
 
 /* Lights effect for Footer */
@@ -235,27 +241,27 @@ footer::before {
 
 /* Loading Animation Styles */
 .loader-container {
-    position: fixed; /* Stay in place */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
-    flex-direction: column; /* Stack loader and loading bar */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it's on top */
+    z-index: 1000;
 }
 
 .loader {
-    border: 8px solid #f3f3f3; /* Light grey border */
-    border-top: 8px solid #2d6a4f; /* Green color */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #2d6a4f;
     border-radius: 50%;
-    width: 60px; /* Increased size */
-    height: 60px; /* Increased size */
-    animation: spin 2s linear infinite; /* Spin animation */
-    margin-bottom: 20px; /* Add space between loader and loading bar */
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
 }
 
 @keyframes spin {
@@ -265,10 +271,10 @@ footer::before {
 
 /* Loading Bar Styles */
 .loading-bar {
-    width: 250px; /* Increased width */
-    height: 10px; /* Increased height */
+    width: 250px;
+    height: 10px;
     background-color: #ddd;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     overflow: hidden;
     position: relative;
 }
@@ -280,9 +286,9 @@ footer::before {
     left: 0;
     width: 0%;
     height: 100%;
-    background: linear-gradient(to right, #2d6a4f, #52b788, #80ed99); /* Gradient colors */
+    background: linear-gradient(to right, #2d6a4f, #52b788, #80ed99);
     border-radius: 5px;
-    animation: load 3s linear infinite; /* Loading animation */
+    animation: load 3s linear infinite;
 }
 
 @keyframes load {

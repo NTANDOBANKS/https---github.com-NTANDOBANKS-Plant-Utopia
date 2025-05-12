@@ -5,38 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Plant Utopia</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <style>
+        /* styles.css */
 
-  <body>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .page-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        #Header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1em;
+        }
+
+        /* Contact Us Box Styling */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .contact-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: #333;
+        }
+
+        .contact-box p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact-box button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .contact-box button:hover {
+            background-color: #367C39;
+        }
+
+        /* Content Styling */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        .column {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
     <div class="page-container">
-      <header id="Header">
-        <h1>PLANT UTOPIA</h1>
-        <h2>Welcome to Plant Utopia</h2>
-        <hr />
-      </header>
+        <header id="Header">
+            <h1>PLANT UTOPIA</h1>
+            <h2>Welcome to Plant Utopia</h2>
+            <hr />
+        </header>
 
-     
+        <nav>
+            <a href="">Home</a> |
+            <a href="About Us.html">About Us</a> |
+        </nav>
 
-      <nav>
-        <a href="">Home</a> |
-        <a href="About Us.html">About Us</a> |
-        
-        
-       </nav>
-
-      <div class="content">
-        <!-- Your page content goes here -->
-        <h2>Welcome to our green paradise!</h2>
-      </div>
-
-   
-
-      <footer>
-        <div class="column">
-          <h3>Company</h3>
+        <!-- Contact Us White Box -->
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Contact Us</h2>
+                <p>For inquiries, please email us at:</p>
+                <a href="mailto:info@plantutopia.com"><button>Email Us</button></a>
+            </div>
         </div>
-      </footer>
+
+        <div class="content">
+            <!-- Your page content goes here -->
+            <h2>Welcome to our green paradise!</h2>
+        </div>
+
+        <footer>
+            <div class="column">
+                <h3>Company</h3>
+            </div>
+        </footer>
     </div>
-  </body>
+</body>
 </html>
