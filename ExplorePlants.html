@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Plant Utopia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+        <div class="loading-bar"></div> <!-- Animated loading bar -->
+    </div>
+
+    <div class="page-container">
+        <header id="Header">
+            <h1>Explore Plants </h1>
+            <hr />
+        </header>
+
+        <nav>
+            <a href="index.html">Return Home</a> |
+            <a href="About Us.html">About Us</a> |
+            <a href="ContactUs.html">Contact Us</a>
+                
+        </nav>
+        <div class="content" style="background: rgba(255,255,255,0.7); padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); color: #222; text-shadow: 0 1px 2px rgba(255,255,255,0.6); position: relative; z-index: 1;">
+            <!-- Cool animated background shapes -->
+            <div class="animated-bg"></div>
+            <!-- Your page content goes here -->
+            <h2 style="color: #1a3d1a; text-decoration: underline;">Plant Utopia<hr></h2>
+            
+            <p style="color: #223344;">Plants are fundamental to life on Earth through a remarkable process called photosynthesis. 
+            They capture sunlight, water, and carbon dioxide, converting them into energy-rich sugars that fuel their growth and development. As a crucial byproduct of this process, plants release oxygen into the atmosphere, the very air we and countless other organisms need to breathe. Furthermore, plants form the base of most food webs, directly or indirectly nourishing nearly all other living things. From providing essential resources like food, shelter, and medicine to regulating climate and
+             maintaining soil health, plants are the silent architects of our planet's life-sustaining systems.</p>
+        </div>
+        <style>
+            /* Cool animated background for the content */
+            .content {
+            overflow: hidden;
+            }
+            .animated-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            }
+            .animated-bg::before, .animated-bg::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.25;
+            animation: float 8s infinite alternate;
+            }
+            .animated-bg::before {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle at 30% 30%, #a8e063 60%, transparent 100%);
+            top: -80px; left: -80px;
+            animation-delay: 0s;
+            }
+            .animated-bg::after {
+            width: 200px; height: 200px;
+            background: radial-gradient(circle at 70% 70%, #56ab2f 60%, transparent 100%);
+            bottom: -60px; right: -60px;
+            animation-delay: 2s;
+            }
+            @keyframes float {
+            0% { transform: scale(1) translateY(0);}
+            100% { transform: scale(1.1) translateY(20px);}
+            }
+        </style>
+
+        <footer>
+            <div class="column">
+                <h3>Company</h3>
+            
+            </div>
+           
+         
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

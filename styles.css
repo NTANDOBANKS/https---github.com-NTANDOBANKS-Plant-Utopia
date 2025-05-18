@@ -15,7 +15,7 @@ html, body {
 .content {
     flex: 1; /* Allows the content to grow and take up available space */
     padding: 40px;
-    background-color none    
+    background-color: transparent;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin: 50px auto 300px; /* Increased top and bottom margin for more space */
